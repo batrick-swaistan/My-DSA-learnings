@@ -13,6 +13,13 @@ class LinkedList:
         new_node=Node(new_data)
         new_node.next=self.head
         self.head=new_node
+    def inser_at(self,pre_node,new_data):
+        if pre_node is None:
+            print("The given Node is not in Linked List")
+            return
+        new_node=Node(new_data)
+        new_node.next=pre_node.next
+        pre_node.next=new_node
     
     def printList(self):
         temp = self.head
