@@ -20,6 +20,15 @@ class LinkedList:
         new_node=Node(new_data)
         new_node.next=pre_node.next
         pre_node.next=new_node
+    def insertlast(self,new_data):
+        new_node=Node(new_data)
+        if self.head is None:
+            new_node=self.head
+            return
+        last=self.head
+        while (last.next):
+            last=last.next
+        last.next=new_node
     
     def printList(self):
         temp = self.head
