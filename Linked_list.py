@@ -1,11 +1,9 @@
 class Node:
     def __init__(self, data):
-        self.data = data # Assign data
-        self.next = None # Initialize next as null
+        self.data = data 
+        self.next = None 
 
 class LinkedList:
-
-    # Function to initialize head
     def __init__(self):
         self.head = None
 
@@ -61,7 +59,7 @@ if __name__=='__main__':
     llist.head = Node(1)
     second = Node(2)
     third = Node(3)
-    llist.head.next = second # Link first node with second
-    second.next = third # Link second node with the third node
+    llist.head.next = second 
+    second.next = third 
     llist.adddd(5)
     llist.printList()
