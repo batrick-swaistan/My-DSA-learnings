@@ -1,3 +1,4 @@
+#Single-Linked-List
 class Node:
     def __init__(self, data):
         self.data = data 
@@ -63,3 +64,43 @@ if __name__=='__main__':
     second.next = third 
     llist.adddd(5)
     llist.printList()
+    
+    
+    #Double-Linked-List
+    class Node():
+    def __init__(self,data):
+        self.data=data
+        self.prev=None
+        self.next=None
+class DoubleLinkedList():
+    def __init__(self):
+        self.head=None
+    def fst(self,data):
+        new_node=Node(data)
+        new_node.next=self.head
+        new_node.prev=None
+        if self.head is not None:
+            self.head.prev=new_node
+        self.head=new_node
+    def printing(self):
+        temp=self.head
+        while temp:
+            print(temp.data,end=" ")
+            temp=temp.next
+if __name__=="__main__":
+    dllist=DoubleLinkedList()
+    dllist.head=Node(1)
+    second=Node(2)
+    Third=Node(3)
+    foruth=Node(4)
+    
+    dllist.head.next=second
+    dllist.head.prev=None
+    second.next=Third
+    second.prev=dllist.head
+    Third.next=foruth
+    Third.prev=second
+    foruth.next=None
+    foruth.prev=Third
+    dllist.fst(9)
+    dllist.printing()
