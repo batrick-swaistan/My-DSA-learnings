@@ -82,6 +82,29 @@ class DoubleLinkedList():
         if self.head is not None:
             self.head.prev=new_node
         self.head=new_node
+    def insrt_at(self,prev_node,new_value):
+        if prev_node is None:
+            print("Pre is empty")
+            return
+        new_node=Node(new_value)
+        new_node.next=prev_node.next
+        prev_node.next=new_node
+        new_node.prev=prev_node
+        if new_node.next is not None:
+            new_node.next.prev=new_node
+    def insrt_last(self,new_val):
+        new_node=Node(new_val)
+        if self.head is None:
+            new_node=self.head
+            new_node.prev=None
+            return
+            return
+        tp=self.head
+        while tp.next:
+            tp=tp.next
+        tp.next=new_node
+        new_node.next=None
+        new_node.prev=tp.next
     def printing(self):
         temp=self.head
         while temp:
