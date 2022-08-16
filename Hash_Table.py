@@ -1,3 +1,6 @@
+#Hash-Table
+
+
 class Hashtable:
     def __init__(self):
         self.max=100
@@ -16,3 +19,4 @@ class Hashtable:
     def __delitem__(self,key):
         h=self.get_hash(key)
         self.arr[h]=None
+
