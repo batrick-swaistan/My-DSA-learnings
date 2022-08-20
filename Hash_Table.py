@@ -43,10 +43,12 @@ class Hashtable:
         if not found:
             self.arr[h].append((key,value))
     def __getitem__(self,index):
-        h=self.hash_func(index)
-        return self.arr[h]
+        h=self.hash_fun(index)
+        for ele in sel.arr[h]:
+            if ele[0]==index:
+                return ele[1]
     def __delitem__(self,key):
-        h=self.hash_func(key)
+        h=self.hash_fun(key)
         for index,ele in enumerate(self.arr[h]):
             if ele[0]==key:
                 del self.arr[h][index]
