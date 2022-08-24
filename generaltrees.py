@@ -4,7 +4,7 @@ class Tree_node:
         self.children=[]
         self.parent=None
         
-    def get_level(self):
+    def get_level(self):   #I have used three levels of ode in this example to get the level of the node I have used this function
         level=0
         p=self.parent
         while p:
@@ -25,10 +25,10 @@ class Tree_node:
                 i.print_tree()
             
 def college():
-    rcet=Tree_node("Engineering")
+    rcet=Tree_node("Engineering")        #level 0
     
-    dept=Tree_node("Computer Science")
-    dept.add_child(Tree_node("Infosys"))
+    dept=Tree_node("Computer Science")   #level 1
+    dept.add_child(Tree_node("Infosys"))  #level 2
     dept.add_child(Tree_node("Tcs"))
     dept.add_child(Tree_node("Chainsys"))
     
